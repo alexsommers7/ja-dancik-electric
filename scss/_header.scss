@@ -16,7 +16,7 @@
 
     // Add gradient overlay to background for text visibility
     @include respond(tab-land) {
-        background-image: linear-gradient(to bottom, rgba(0,0,0, .65), rgba(0,0,0, .65)), url(/Img/hero-main.jpg);
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .425), rgba(0,0,0, .425)), url(/Img/hero-main-mobile.jpg);
     }
 
     &__wrapper {
