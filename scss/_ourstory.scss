@@ -1,9 +1,3 @@
-.section--story {
-    @include respond(phone) {
-        margin-top: 15rem;
-    }
-}
-
 .story {
     padding: 4rem 0;
     display: flex;

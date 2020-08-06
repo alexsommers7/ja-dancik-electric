@@ -119,7 +119,8 @@ p:not(:last-child) {
       background-image: url(/Img/hero-main@2x.jpg); } }
   @media only screen and (max-width: 75em) {
     .header {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/Img/hero-main-mobile.jpg); } }
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/Img/hero-main-mobile.jpg);
+      background-position: top; } }
   .header__wrapper {
     width: 60%;
     height: 100%;
@@ -238,10 +239,6 @@ p:not(:last-child) {
         transition: stroke .2s; }
       .nav__icon--close:hover line {
         stroke: rgba(245, 245, 247, 0.75); }
-
-@media only screen and (max-width: 37.5em) {
-  .section--story {
-    margin-top: 15rem; } }
 
 .story {
   padding: 4rem 0;
