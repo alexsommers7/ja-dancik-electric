@@ -145,7 +145,8 @@
             height: 2.75rem;
 
             @include respond(tab-port) {
-                top: 3.8rem;
+                top: 3.25rem;
+                right: 3.65rem;
             }
 
             & svg {
@@ -162,7 +163,8 @@
             visibility: hidden;
 
             @include respond(tab-port) {
-                top: 3.75rem;
+                top: 3.25rem;
+                right: 3.1rem;
             }
 
             & line {

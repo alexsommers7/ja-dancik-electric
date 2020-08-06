@@ -217,7 +217,8 @@ p:not(:last-child) {
       height: 2.75rem; }
       @media only screen and (max-width: 56.25em) {
         .nav__icon--open {
-          top: 3.8rem; } }
+          top: 3.25rem;
+          right: 3.65rem; } }
       .nav__icon--open svg {
         transition: fill .2s; }
     .nav__icon--close {
@@ -229,7 +230,8 @@ p:not(:last-child) {
       visibility: hidden; }
       @media only screen and (max-width: 56.25em) {
         .nav__icon--close {
-          top: 3.75rem; } }
+          top: 3.25rem;
+          right: 3.1rem; } }
       .nav__icon--close line {
         stroke: currentColor;
         stroke-width: 5;
