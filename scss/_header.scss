@@ -16,6 +16,11 @@
 
     // Add gradient overlay to background for text visibility
     @include respond(tab-land) {
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .6)), url(/Img/hero-main.jpg);
+    }
+
+    // Switch to mobile hero
+    @include respond(phone) {
         background-image: linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .6)), url(/Img/hero-main-mobile.jpg);
         background-position: top;
     }
