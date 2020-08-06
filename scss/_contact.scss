@@ -82,6 +82,7 @@
         cursor: pointer;
         text-transform: uppercase;
         text-align: center;
+        -webkit-appearance: none;
         transition: all .3s;
 
         @include respond(tab-port) {

@@ -448,6 +448,7 @@ p:not(:last-child) {
     cursor: pointer;
     text-transform: uppercase;
     text-align: center;
+    -webkit-appearance: none;
     transition: all .3s; }
     @media only screen and (max-width: 56.25em) {
       .contact__submit {
