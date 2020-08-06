@@ -213,8 +213,8 @@ p:not(:last-child) {
       position: absolute;
       top: 3.3rem;
       right: 4.65rem;
-      width: 2.25rem;
-      height: 2.25rem; }
+      width: 2.75rem;
+      height: 2.75rem; }
       @media only screen and (max-width: 56.25em) {
         .nav__icon--open {
           top: 3.8rem; } }
@@ -222,15 +222,14 @@ p:not(:last-child) {
         transition: fill .2s; }
     .nav__icon--close {
       position: fixed;
-      width: 3.2rem;
-      height: 3.2rem;
-      right: 4.05rem;
-      top: 3.2rem;
+      width: 3.7rem;
+      height: 3.7rem;
+      right: 4rem;
+      top: 3.25rem;
       visibility: hidden; }
       @media only screen and (max-width: 56.25em) {
         .nav__icon--close {
-          top: 3.7rem;
-          right: 4.3rem; } }
+          top: 3.75rem; } }
       .nav__icon--close line {
         stroke: currentColor;
         stroke-width: 5;
@@ -344,7 +343,7 @@ p:not(:last-child) {
   @media only screen and (max-width: 56.25em) {
     .staff {
       padding: 5rem 0 4rem; } }
-  .staff__employee {
+  .staff__employee, .success__message {
     padding: 3.75rem;
     display: flex;
     flex-direction: column;
@@ -354,13 +353,13 @@ p:not(:last-child) {
     box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.1), 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 0 1.5rem rgba(255, 255, 255, 0.1);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)); }
     @media only screen and (max-width: 56.25em) {
-      .staff__employee:not(:last-child) {
+      .staff__employee:not(:last-child), .success__message:not(:last-child) {
         margin-bottom: 6rem; } }
     @media only screen and (max-width: 100em) {
-      .staff__employee {
+      .staff__employee, .success__message {
         flex: 0 0 40%; } }
     @media only screen and (max-width: 56.25em) {
-      .staff__employee {
+      .staff__employee, .success__message {
         flex: 0 0 100%;
         padding: 3.5rem 2rem; } }
   .staff__image {
@@ -463,6 +462,20 @@ p:not(:last-child) {
     .contact__submit:focus {
       border-radius: 0; }
 
+.success {
+  height: 85vh;
+  background-color: #000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; }
+  .success__message {
+    animation: fade-in 1s ease-out; }
+  .success__link {
+    text-transform: uppercase;
+    padding-bottom: 1rem; }
+
 .nav-active {
   visibility: visible;
   opacity: 1;
@@ -540,9 +553,15 @@ p:not(:last-child) {
 
 div.fadeDelayShort {
   transition: opacity .75s .4s ease-in, transform .75s .4s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out; }
+  @media only screen and (max-width: 56.25em) {
+    div.fadeDelayShort {
+      transition: opacity .75s ease-in, transform .75s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out; } }
 
 div.fadeDelayLong {
   transition: opacity .75s .6s ease-in, transform .75s .6s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out; }
+  @media only screen and (max-width: 56.25em) {
+    div.fadeDelayLong {
+      transition: opacity .75s ease-in, transform .75s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out; } }
 
 @keyframes fade-in {
   0% {

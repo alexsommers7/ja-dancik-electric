@@ -141,8 +141,8 @@
             position: absolute;
             top: 3.3rem;
             right: 4.65rem;
-            width: 2.25rem;
-            height: 2.25rem;
+            width: 2.75rem;
+            height: 2.75rem;
 
             @include respond(tab-port) {
                 top: 3.8rem;
@@ -155,15 +155,14 @@
 
         &--close {
             position: fixed;
-            width: 3.2rem;
-            height: 3.2rem;
-            right: 4.05rem;
-            top: 3.2rem;
+            width: 3.7rem;
+            height: 3.7rem;
+            right: 4rem;
+            top: 3.25rem;
             visibility: hidden;
 
             @include respond(tab-port) {
-                top: 3.7rem;
-                right: 4.3rem;
+                top: 3.75rem;
             }
 
             & line {

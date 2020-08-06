@@ -23,16 +23,22 @@
     opacity: 1;
 }
 
-div.fadeDelayShort { // Adding div to override specificity of .fade transition declaration
+div.fadeDelayShort { // Adding div to override specificity of .fade transition declaration and add delay
     transition: opacity .75s .4s ease-in, transform .75s .4s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
 
-    // ADD MEDIA QUERY TO REMOVE DELAY ONCE STACKED
+    // Remove delay once stacked
+    @include respond(tab-port) {
+        transition: opacity .75s ease-in, transform .75s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
+    }
 }
 
-div.fadeDelayLong { // Adding div to override specificity of .fade transition declaration
+div.fadeDelayLong { // Adding div to override specificity of .fade transition declaration and add delay
     transition: opacity .75s .6s ease-in, transform .75s .6s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
 
-    // ADD MEDIA QUERY TO REMOVE DELAY ONCE STACKED
+    // Remove delay once stacked
+    @include respond(tab-port) {
+        transition: opacity .75s ease-in, transform .75s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
+    }
 }
 
 
