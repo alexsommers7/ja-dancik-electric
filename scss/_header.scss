@@ -1,0 +1,181 @@
+.header {
+    height: 100vh;
+    max-width: $layout-max-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+    background-image: url(/Img/hero-main.jpg);
+    background-size: cover;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    animation: fade-in 1s ease-out;
+
+    @include retina(two) {
+        background-image: url(/Img/hero-main@2x.jpg);
+    }
+
+    // Add gradient overlay to background for text visibility
+    @include respond(tab-land) {
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .65), rgba(0,0,0, .65)), url(/Img/hero-main.jpg);
+    }
+
+    &__wrapper {
+        width: 60%;
+        height: 100%;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @include respond(desk-small) {
+            width: 57.5%;
+        }
+
+        // Switch to mobile nav
+        @include respond(tab-land) {
+            width: 100%;
+          }
+    }
+
+    &__text {
+        flex: 0 0 75%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        animation: fade-in-up .75s .3s ease-in-out forwards;
+    }
+
+    &__heading {
+        flex: 1 0 100%;
+        align-self: center;
+    }
+}
+
+.nav {
+    text-align: right;
+    flex: 0 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 1s ease-out;
+
+    &__list {
+        flex: 0 0 60%;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+        transition: all .4s ease-in-out;
+
+        @include respond(desk-large) {
+            flex: 0 0 75%;
+        }
+
+        @include respond(desk-small) {
+            flex: 0 0 90%;
+        }
+
+        // Switch to mobile nav
+        @include respond(tab-land) {
+            z-index: 20;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba($color-grey-on-white, .975);
+            position: fixed;
+            width: 100%;
+            align-self: stretch;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+          }
+    }
+
+    &__item {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        // Switch to mobile nav
+        @include respond(tab-land) {
+            text-align: center;
+            width: 100%;
+            margin: 1.25rem 0;
+            font-size: 3.5rem;
+          }
+    }
+
+    &__link {
+        padding-bottom: 10px;
+    }
+
+    &__icon {
+        display: none;
+        fill: #fff;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        color: #fff;
+        z-index: 25;
+        cursor: pointer;
+
+        &:active {
+            outline: none;
+        }
+
+        &:hover {
+            fill: rgba($color-text, .75);
+        }
+
+        // Switch to mobile nav
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &--open {
+            position: absolute;
+            top: 3.3rem;
+            right: 4.65rem;
+            width: 2.25rem;
+            height: 2.25rem;
+
+            @include respond(tab-port) {
+                top: 3.8rem;
+            }
+
+            & svg {
+                transition: fill .2s;
+            }
+        }
+
+        &--close {
+            position: fixed;
+            width: 3.2rem;
+            height: 3.2rem;
+            right: 4.05rem;
+            top: 3.2rem;
+            visibility: hidden;
+
+            @include respond(tab-port) {
+                top: 3.7rem;
+                right: 4.3rem;
+            }
+
+            & line {
+                stroke: currentColor;
+                stroke-width: 5;
+                transition: stroke .2s;
+            }
+
+            &:hover line {
+                stroke: rgba($color-text, .75);
+            }
+        }
+    }
+
+}

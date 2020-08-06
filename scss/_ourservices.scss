@@ -1,0 +1,47 @@
+.section--services {
+    background-image: url(/Img/our-services-bg.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 10;
+
+    @include respond(tab-port) {
+        padding: 0;
+        background-position: top right;
+    }
+
+    @include respond(phone) {
+        background-image: url(/Img/our-services-bg-mobile.jpg);
+    }
+}
+
+.services {
+    padding: 4rem 4rem 6rem;
+    width: 36%;
+    margin-left: 10%;
+    margin-right: auto;
+    background-image: linear-gradient(to bottom, rgba(0,0,0, .75), rgba(0,0,0, .75));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond(desk-small) {
+        width: 43%;
+        margin-left: 8%;
+    }
+
+    @include respond(tab-land) {
+        width: 50%;
+        margin-left: 4%;
+    }
+
+    @include respond(tab-port) {
+        width: 100%;
+        margin-left: 0;
+        padding: 4rem 3rem 8rem;
+    }
+
+    & p:first-of-type {
+        padding-top: 5rem;
+    }
+}

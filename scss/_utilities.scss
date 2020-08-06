@@ -1,0 +1,73 @@
+// NAV
+.nav-active {
+  visibility: visible;
+  opacity: 1;
+  height: 100vh;
+}
+
+// LIGHT STREAK
+.light-streak {
+  z-index: 5;
+  position: absolute;
+  animation: fade-in 1s ease-out;
+  width: 15rem;
+
+  @include respond(tab-port) {
+    width: 10rem;
+    z-index: 0;
+  }
+
+  @include respond(phone) {
+    width: 8rem;
+  }
+
+  &--1 {
+      top: -50rem;
+      right: 19rem;
+      transform: rotate(-65deg);
+
+      @include respond(desk-small) {
+        top: -40rem;
+    }
+
+      @include respond(tab-land) {
+        right: 5rem;
+        top: -25rem;
+      }
+
+      @include respond(tab-port) {
+        right: 8rem;
+        top: -20rem;
+      }
+
+      @include respond(phone) {
+        right: 7rem;
+        top: -25rem;
+      }
+  }
+
+  &--2 {
+      bottom: -20rem;
+      left: -5rem;
+      transform: rotate(-65deg);
+
+      @include respond(desk-small) {
+        bottom: -25rem;
+        left: -12rem;
+      }
+
+      @include respond(tab-port) {
+        bottom: -15rem;
+        left: 12rem;
+      }
+      
+      @include respond(phone) {
+        bottom: -18rem;
+        left: 7rem;
+      }
+  }
+}
+
+.text-center {
+  text-align: center !important;
+}

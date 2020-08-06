@@ -1,0 +1,105 @@
+.section--contact  {
+    background-image: linear-gradient(110deg, rgba(255, 255, 255, .7) 0%, rgba(255, 255, 255, .7) 60%, transparent 60.1%), url(/Img/contact-us-bg.jpg);
+    background-size: cover;
+    background-position: right;
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(110deg, rgba(255, 255, 255, .825) 0%, rgba(255, 255, 255, .825) 100%), url(/Img/contact-us-bg.jpg);
+        background-position: right center;
+    }
+}
+
+.contact {
+    width: 50%;
+    padding: 4rem;
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    &__heading {
+        color: $color-grey-on-white;
+        font-weight: 300;
+        margin-bottom: 5.5rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    &__label {
+        color: $color-grey-on-white;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    &__input,
+    &__textarea {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 4.5rem;
+        padding: 1.5rem 2rem;
+        background-color: transparent;
+        border: 2px solid $color-grey-on-white;
+        border-radius: 2px;
+        width: 100%;
+        max-width: 100%;
+        transition: all .3s;
+    }
+
+    &__input {
+        
+        &:focus {
+            outline: none; // Removing focus in place of bottom border - accessibility not impacted
+            border-bottom: 3px solid $color-green;
+            box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+        }
+
+        &:focus:invalid { // When invalid as interpreted by browser
+            border-bottom: 3px solid $color-red;
+        }
+    }
+
+    &__textarea {
+        height: 15rem;
+        font-family: 'Montserrat', sans-serif;
+
+        &:focus {
+            border: 3px solid $color-grey-on-white;
+            box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+        }
+    }
+
+    &__submit {
+        background-color: transparent;
+        font-family: 'Montserrat', sans-serif;
+        padding: 1.5rem 6rem;
+        margin-bottom: 3rem;
+        border-radius: 100px;
+        border: 2px solid $color-grey-on-white;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-align: center;
+        transition: all .3s;
+
+        @include respond(tab-port) {
+            width: 20rem;
+            margin: 4rem auto;
+            display: block;
+        }
+
+        &:hover,
+        &:active {
+            border: 2px solid #666;
+            background-color: #666;
+            color: $color-text;
+            outline: none;
+        }
+
+        &:focus {
+            border-radius: 0;
+        }
+    }
+}
