@@ -10,6 +10,10 @@
     overflow-x: hidden;
     animation: fade-in 1s ease-out;
 
+    @include ieOnly {
+        display: none;
+    }
+
     @include retina(two) {
         background-image: url(/Img/hero-main@2x.jpg);
     }
@@ -109,7 +113,7 @@
         @include respond(tab-land) {
             text-align: center;
             width: 100%;
-            margin: 1.25rem 0;
+            margin: 1.5rem 0;
             font-size: 3.5rem;
           }
     }
@@ -160,6 +164,19 @@
             }
         }
 
+        // Styles to apply when nav is open
+        &--open.isOpen ~ .nav__icon--close {
+            visibility: visible;
+        }
+
+        @include respond(tab-land) {
+            &--open.isOpen ~.nav__list {
+                visibility: visible;
+                opacity: 1;
+                height: 100vh;
+            }
+        }
+
         &--close {
             position: fixed;
             width: 3.7rem;
@@ -185,4 +202,10 @@
         }
     }
 
+}
+
+// NAV UTILITIES
+.isOpen {
+    visibility: hidden;
+    opacity: 0;
 }

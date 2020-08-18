@@ -6,6 +6,10 @@
     font-size: 1.6rem;
     padding: 4rem;
 
+    @include ieOnly {
+        display: none;
+    }
+
     @include respond(tab-port) {
         padding: 3rem;
     }

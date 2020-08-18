@@ -1,30 +1,12 @@
 // MOBILE NAV
-const navBtnOpen = document.querySelector(".nav__icon--open");
-const navBtnClose = document.querySelector(".nav__icon--close");
-const navLink = document.querySelectorAll(".nav__link, .nav__icon--close");
-const navList = document.querySelector(".nav__list");
+// selecting parent of button AND all nav links for event delegation
+const navParent = document.querySelector(".nav");
+const navToggle = document.querySelector("#navi-toggle");
 
-// Open nav on hamburger click
-navBtnOpen.addEventListener("click", openNav);
-
-// Close nav on 'x' or any link click, or if screen sizes goes larger than tablet
-for (let i = 0; i < navLink.length; i++)
-{
-  navLink[i].addEventListener("click", closeNav);
-}
-// Function declarations
-function openNav() {
-  navBtnOpen.style.visibility = "hidden";
-  navBtnClose.style.visibility = "visible";
-  navList.classList.add("nav-active");
-}
-
-function closeNav() {
-  navBtnClose.style.visibility = "hidden";
-  navBtnOpen.style.visibility = "visible";
-  navList.classList.remove("nav-active");
-}
-
+// toggle isOpen on first child, using css ~ selector to style subsequent siblings
+navParent.addEventListener("click", () => {
+    navToggle.classList.toggle("isOpen");
+});
 
 
 // SMOOTH SCROLL FOR ANCHOR LINKS

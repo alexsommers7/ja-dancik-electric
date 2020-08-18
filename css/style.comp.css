@@ -39,12 +39,27 @@ section {
   position: relative;
   max-width: 1920px;
   font-size: 1.8rem; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    section {
+      display: none; } }
   @media only screen and (max-width: 100em) {
     section {
       padding: 0 4rem; } }
   @media only screen and (max-width: 56.25em) {
     section {
       padding: 0 3rem; } }
+
+.ie-alert {
+  display: none; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .ie-alert {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      padding: 2rem;
+      background-color: #000; } }
 
 p:not(:last-child) {
   margin-bottom: 2rem; }
@@ -114,6 +129,9 @@ p:not(:last-child) {
   background-repeat: no-repeat;
   overflow-x: hidden;
   animation: fade-in 1s ease-out; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .header {
+      display: none; } }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .header {
       background-image: url(/Img/hero-main@2x.jpg); } }
@@ -191,7 +209,7 @@ p:not(:last-child) {
       .nav__item {
         text-align: center;
         width: 100%;
-        margin: 1.25rem 0;
+        margin: 1.5rem 0;
         font-size: 3.5rem; } }
   .nav__link {
     padding-bottom: 10px; }
@@ -225,6 +243,13 @@ p:not(:last-child) {
           right: 3.65rem; } }
       .nav__icon--open svg {
         transition: fill .2s; }
+    .nav__icon--open.isOpen ~ .nav__icon--close {
+      visibility: visible; }
+    @media only screen and (max-width: 75em) {
+      .nav__icon--open.isOpen ~ .nav__list {
+        visibility: visible;
+        opacity: 1;
+        height: 100vh; } }
     .nav__icon--close {
       position: fixed;
       width: 3.7rem;
@@ -242,6 +267,10 @@ p:not(:last-child) {
         transition: stroke .2s; }
       .nav__icon--close:hover line {
         stroke: rgba(245, 245, 247, 0.75); }
+
+.isOpen {
+  visibility: hidden;
+  opacity: 0; }
 
 .story {
   padding: 4rem 0;
@@ -479,11 +508,6 @@ p:not(:last-child) {
     text-transform: uppercase;
     padding-bottom: 1rem; }
 
-.nav-active {
-  visibility: visible;
-  opacity: 1;
-  height: 100vh; }
-
 .light-streak {
   z-index: 5;
   position: absolute;
@@ -587,6 +611,9 @@ div.fadeDelayLong {
   text-align: center;
   font-size: 1.6rem;
   padding: 4rem; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .footer {
+      display: none; } }
   @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 3rem; } }
