@@ -3,7 +3,7 @@
     max-width: $layout-max-width;
     margin: 0 auto;
     padding: 0 2rem;
-    background-image: url(/Img/hero-main.jpg);
+    background-image: url(/Img/hero-main-min.jpg);
     background-size: cover;
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -15,17 +15,17 @@
     }
 
     @include retina(two) {
-        background-image: url(/Img/hero-main@2x.jpg);
+        background-image: url(/Img/hero-main@2x-min.jpg);
     }
 
     // Add gradient overlay to background for text visibility
     @include respond(tab-land) {
-        background-image: linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .6)), url(/Img/hero-main.jpg);
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .6)), url(/Img/hero-main-min.jpg);
     }
 
     // Switch to mobile hero
     @include respond(phone) {
-        background-image: linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .6)), url(/Img/hero-main-mobile.jpg);
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .6)), url(/Img/hero-main-mobile-min.jpg);
         background-position: top;
     }
 
