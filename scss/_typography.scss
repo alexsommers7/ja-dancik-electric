@@ -1,81 +1,81 @@
 p:not(:last-child) {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .link {
-    color: $color-text;
-    text-decoration: none;
-    transition: all .3s;
-    position: relative;
-    
-    // Bottom border spread pseudo element
-    &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        border-bottom: 1.25px solid $color-link-underline-hover;
-        transform: scaleX(0);
-        transition: all .25s ease-in-out;
+  color: $color-text;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
 
-        // Switch to mobile nav
-        @include respond(tab-land) {
-            left: 0;
-        }
-    }
+  // Bottom border spread pseudo element
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-bottom: 1.25px solid $color-link-underline-hover;
+    transform: scaleX(0);
+    transition: all 0.25s ease-in-out;
 
-    // Bottom border spread animation
-    &:hover::after {
-        transform: scaleX(1);
+    // Switch to mobile nav
+    @include respond(tab-land) {
+      left: 0;
     }
+  }
+
+  // Bottom border spread animation
+  &:hover::after {
+    transform: scaleX(1);
+  }
 }
 
 .heading {
-    text-align: center;
-    text-transform: uppercase;
+  text-align: center;
+  text-transform: uppercase;
 
-    &--primary {
-        font-weight: 100;
-        font-size: 7.2rem;
+  &--primary {
+    font-weight: 100;
+    font-size: 7.2rem;
 
-        @include respond(desk-small) {
-            line-height: 1.2;
-            margin-bottom: 2rem;
-        }
+    @include respond(desk-small) {
+      line-height: 1.2;
+      margin-bottom: 2rem;
     }
+  }
 
-    &--secondary {
-        font-weight: 300;
-        font-size: 2.4rem;
-    }
+  &--secondary {
+    font-weight: 300;
+    font-size: 2.4rem;
+  }
 
-    &--tertiary {
-        font-weight: 200;
-        font-size: 3.6rem;
-        position: relative;
-        padding: 2rem;
-    
-        // Separator
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 10rem;
-            text-align: center;
-            border-bottom: 1px solid #666;
-            padding-bottom: 2rem;
-            display: inline-block;
-        }
-    }
+  &--tertiary {
+    font-weight: 200;
+    font-size: 3.6rem;
+    position: relative;
+    padding: 2rem;
 
-    &--quaternary {
-        text-align: left;
-        font-weight: 200;
-        font-size: 2.4rem;
+    // Separator
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10rem;
+      text-align: center;
+      border-bottom: 1px solid #666;
+      padding-bottom: 2rem;
+      display: inline-block;
     }
+  }
+
+  &--quaternary {
+    text-align: left;
+    font-weight: 200;
+    font-size: 2.4rem;
+  }
 }
 
 // Type scale @ root size 62.5%
