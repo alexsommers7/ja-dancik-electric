@@ -177,7 +177,7 @@ p:not(:last-child) {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    animation: fade-in-up .75s .3s ease-in-out forwards; }
+    animation: fade-in-up 0.75s 0.3s ease-in-out forwards; }
   .header__heading {
     flex: 1 0 100%;
     align-self: center; }
@@ -195,7 +195,7 @@ p:not(:last-child) {
     justify-content: space-around;
     list-style-type: none;
     padding: 0;
-    transition: all .4s ease-in-out; }
+    transition: all 0.4s ease-in-out; }
     @media only screen and (max-width: 100em) {
       .nav__list {
         flex: 0 0 75%; } }
@@ -256,7 +256,7 @@ p:not(:last-child) {
           top: 3.25rem;
           right: 3.65rem; } }
       .nav__icon--open svg {
-        transition: fill .2s; }
+        transition: fill 0.2s; }
     .nav__icon--open.isOpen ~ .nav__icon--close {
       visibility: visible; }
     @media only screen and (max-width: 75em) {
@@ -278,7 +278,7 @@ p:not(:last-child) {
       .nav__icon--close line {
         stroke: currentColor;
         stroke-width: 5;
-        transition: stroke .2s; }
+        transition: stroke 0.2s; }
       .nav__icon--close:hover line {
         stroke: rgba(245, 245, 247, 0.75); }
 
@@ -330,7 +330,7 @@ p:not(:last-child) {
       display: inline-block;
       font-weight: 100;
       font-size: 20rem;
-      line-height: .8;
+      line-height: 0.8;
       margin-bottom: 1.5rem; }
     .story__roc span.twenty {
       font-weight: 500; }
@@ -461,7 +461,7 @@ p:not(:last-child) {
     text-transform: uppercase; }
   .contact__input, .contact__textarea {
     display: block;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
     margin-bottom: 4.5rem;
     padding: 1.5rem 2rem;
@@ -470,7 +470,7 @@ p:not(:last-child) {
     border-radius: 2px;
     width: 100%;
     max-width: 100%;
-    transition: all .3s; }
+    transition: all 0.3s; }
   .contact__input:focus {
     outline: none;
     border-bottom: 3px solid #55c57a;
@@ -479,13 +479,13 @@ p:not(:last-child) {
     border-bottom: 3px solid #ff7730; }
   .contact__textarea {
     height: 15rem;
-    font-family: 'Montserrat', sans-serif; }
+    font-family: "Montserrat", sans-serif; }
     .contact__textarea:focus {
       border: 3px solid #3e3e3e;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
   .contact__submit {
     background-color: transparent;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     padding: 1.5rem 6rem;
     margin-bottom: 3rem;
     border-radius: 100px;
@@ -494,7 +494,7 @@ p:not(:last-child) {
     text-transform: uppercase;
     text-align: center;
     -webkit-appearance: none;
-    transition: all .3s; }
+    transition: all 0.3s; }
     @media only screen and (max-width: 56.25em) {
       .contact__submit {
         width: 20rem;
@@ -574,7 +574,7 @@ p:not(:last-child) {
   text-align: center !important; }
 
 .fade {
-  transition: opacity .75s ease-in-out, transform .75s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out; }
+  transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out; }
 
 .fadeFromTop {
   opacity: 0;
@@ -593,16 +593,16 @@ p:not(:last-child) {
   opacity: 1; }
 
 div.fadeDelayShort {
-  transition: opacity .75s .4s ease-in, transform .75s .4s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out; }
+  transition: opacity 0.75s 0.4s ease-in, transform 0.75s 0.4s ease-in, background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out; }
   @media only screen and (max-width: 56.25em) {
     div.fadeDelayShort {
-      transition: opacity .75s ease-in, transform .75s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out; } }
+      transition: opacity 0.75s ease-in, transform 0.75s ease-in, background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out; } }
 
 div.fadeDelayLong {
-  transition: opacity .75s .6s ease-in, transform .75s .6s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out; }
+  transition: opacity 0.75s 0.6s ease-in, transform 0.75s 0.6s ease-in, background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out; }
   @media only screen and (max-width: 56.25em) {
     div.fadeDelayLong {
-      transition: opacity .75s ease-in, transform .75s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out; } }
+      transition: opacity 0.75s ease-in, transform 0.75s ease-in, background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out; } }
 
 @keyframes fade-in {
   0% {
@@ -641,3 +641,5 @@ div.fadeDelayLong {
   .footer__text:last-child {
     color: rgba(245, 245, 247, 0.6);
     font-size: 1.2rem; }
+  .footer__text a {
+    color: inherit; }
