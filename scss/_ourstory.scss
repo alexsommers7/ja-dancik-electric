@@ -1,69 +1,69 @@
 .story {
-    padding: 4rem 0;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
+  padding: 4rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 
-    &__text,
-    &__roc {
-        padding: 3rem;
+  &__text,
+  &__roc {
+    padding: 3rem;
 
-        @include respond(tab-port) {
-            padding: 3rem 0;
-        }
+    @include respond(tab-port) {
+      padding: 3rem 0;
+    }
+  }
+
+  &__text {
+    flex: 0 0 45%;
+
+    @include respond(desk-small) {
+      flex: 0 0 50%;
     }
 
-    &__text {
-        flex: 0 0 45%;
+    @include respond(tab-port) {
+      flex: 0 0 100%;
+    }
+  }
 
-        @include respond(desk-small) {
-            flex: 0 0 50%;
-        }
+  &__roc {
+    flex: 0 0 28%;
+    text-align: center;
 
-        @include respond(tab-port) {
-            flex: 0 0 100%;
-        }
+    @include respond(desk-small) {
+      flex: 0 0 37%;
     }
 
-    &__roc {
-        flex: 0 0 28%;
-        text-align: center;
-
-        @include respond(desk-small) {
-            flex: 0 0 37%;
-        }
-
-        @include respond(tab-port) {
-            flex: 0 0 100%;
-        }
-
-        & p {
-            font-size: 2.4rem;
-            padding: 2.5rem 5rem;
-            font-weight: 200;
-
-            @include respond(tab-port) {
-                width: 45%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            @include respond(phone) {
-                width: 90%;
-            }
-        }
-
-        & span.zero {
-            display: inline-block;
-            font-weight: 100;
-            font-size: 20rem;
-            line-height: .8;
-            margin-bottom: 1.5rem;
-        }
-
-        & span.twenty {
-            font-weight: 500;
-        }
+    @include respond(tab-port) {
+      flex: 0 0 100%;
     }
+
+    & p {
+      font-size: 2.4rem;
+      padding: 2.5rem 5rem;
+      font-weight: 200;
+
+      @include respond(tab-port) {
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @include respond(phone) {
+        width: 90%;
+      }
+    }
+
+    & span.zero {
+      display: inline-block;
+      font-weight: 100;
+      font-size: 20rem;
+      line-height: 0.8;
+      margin-bottom: 1.5rem;
+    }
+
+    & span.twenty {
+      font-weight: 500;
+    }
+  }
 }

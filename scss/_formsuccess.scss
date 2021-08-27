@@ -1,19 +1,19 @@
 .success {
-    height: 85vh;
-    background-color: $color-background;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
+  height: 85vh;
+  background-color: $color-background;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 
-    &__message {
-        @extend .staff__employee;
-        animation: fade-in 1s ease-out;
-    }
+  &__message {
+    @extend .staff__employee;
+    animation: fade-in 1s ease-out;
+  }
 
-    &__link {
-        text-transform: uppercase;
-        padding-bottom: 1rem;
-    }
+  &__link {
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+  }
 }

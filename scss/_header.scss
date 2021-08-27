@@ -1,211 +1,211 @@
 .header {
-    height: 100vh;
-    max-width: $layout-max-width;
-    margin: 0 auto;
-    padding: 0 2rem;
-    background-image: url(/Img/hero-main-min.jpg);
-    background-size: cover;
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    animation: fade-in 1s ease-out;
+  height: 100vh;
+  max-width: $layout-max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-image: url(/Img/hero-main-min.jpg);
+  background-size: cover;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  animation: fade-in 1s ease-out;
 
-    @include ieOnly {
-        display: none;
+  @include ieOnly {
+    display: none;
+  }
+
+  @include retina(two) {
+    background-image: url(/Img/hero-main@2x-min.jpg);
+  }
+
+  // Add gradient overlay to background for text visibility
+  @include respond(tab-land) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/Img/hero-main-min.jpg);
+  }
+
+  // Switch to mobile hero
+  @include respond(phone) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(/Img/hero-main-mobile-min.jpg);
+    background-position: top;
+  }
+
+  &__wrapper {
+    width: 60%;
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include respond(desk-small) {
+      width: 57.5%;
     }
 
-    @include retina(two) {
-        background-image: url(/Img/hero-main@2x-min.jpg);
-    }
-
-    // Add gradient overlay to background for text visibility
+    // Switch to mobile nav
     @include respond(tab-land) {
-        background-image: linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .6)), url(/Img/hero-main-min.jpg);
+      width: 100%;
     }
+  }
 
-    // Switch to mobile hero
-    @include respond(phone) {
-        background-image: linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .6)), url(/Img/hero-main-mobile-min.jpg);
-        background-position: top;
-    }
+  &__text {
+    flex: 0 0 75%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fade-in-up 0.75s 0.3s ease-in-out forwards;
+  }
 
-    &__wrapper {
-        width: 60%;
-        height: 100%;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        @include respond(desk-small) {
-            width: 57.5%;
-        }
-
-        // Switch to mobile nav
-        @include respond(tab-land) {
-            width: 100%;
-          }
-    }
-
-    &__text {
-        flex: 0 0 75%;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        animation: fade-in-up .75s .3s ease-in-out forwards;
-    }
-
-    &__heading {
-        flex: 1 0 100%;
-        align-self: center;
-    }
+  &__heading {
+    flex: 1 0 100%;
+    align-self: center;
+  }
 }
 
 .nav {
-    text-align: right;
-    flex: 0 0 10%;
+  text-align: right;
+  flex: 0 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-in 1s ease-out;
+
+  &__list {
+    flex: 0 0 60%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: fade-in 1s ease-out;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    transition: all 0.4s ease-in-out;
 
-    &__list {
-        flex: 0 0 60%;
-        display: flex;
-        justify-content: space-around;
-        list-style-type: none;
-        padding: 0;
-        transition: all .4s ease-in-out;
-
-        @include respond(desk-large) {
-            flex: 0 0 75%;
-        }
-
-        @include respond(desk-small) {
-            flex: 0 0 90%;
-        }
-
-        // Switch to mobile nav
-        @include respond(tab-land) {
-            z-index: 20;
-            flex-direction: column;
-            justify-content: center;
-            background-color: rgba($color-grey-on-white, .975);
-            position: fixed;
-            width: 100%;
-            align-self: stretch;
-            height: 0;
-            overflow: hidden;
-            visibility: hidden;
-            opacity: 0;
-          }
+    @include respond(desk-large) {
+      flex: 0 0 75%;
     }
 
-    &__item {
-        font-size: 2rem;
-        font-weight: 300;
-        text-transform: uppercase;
-
-        // Switch to mobile nav
-        @include respond(tab-land) {
-            text-align: center;
-            width: 100%;
-            margin: 1.5rem 0;
-            font-size: 3.5rem;
-          }
+    @include respond(desk-small) {
+      flex: 0 0 90%;
     }
 
-    &__link {
-        padding-bottom: 10px;
+    // Switch to mobile nav
+    @include respond(tab-land) {
+      z-index: 20;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba($color-grey-on-white, 0.975);
+      position: fixed;
+      width: 100%;
+      align-self: stretch;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__item {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    // Switch to mobile nav
+    @include respond(tab-land) {
+      text-align: center;
+      width: 100%;
+      margin: 1.5rem 0;
+      font-size: 3.5rem;
+    }
+  }
+
+  &__link {
+    padding-bottom: 10px;
+  }
+
+  &__icon {
+    display: none;
+    fill: #fff;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #fff;
+    z-index: 25;
+    cursor: pointer;
+
+    &:active {
+      outline: none;
     }
 
-    &__icon {
-        display: none;
-        fill: #fff;
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        color: #fff;
-        z-index: 25;
-        cursor: pointer;
-
-        &:active {
-            outline: none;
-        }
-
-        &:hover {
-            fill: rgba($color-text, .75);
-        }
-
-        // Switch to mobile nav
-        @include respond(tab-land) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        &--open {
-            position: absolute;
-            top: 3.3rem;
-            right: 4.65rem;
-            width: 2.75rem;
-            height: 2.75rem;
-
-            @include respond(tab-port) {
-                top: 3.25rem;
-                right: 3.65rem;
-            }
-
-            & svg {
-                transition: fill .2s;
-            }
-        }
-
-        // Styles to apply when nav is open
-        &--open.isOpen ~ .nav__icon--close {
-            visibility: visible;
-        }
-
-        @include respond(tab-land) {
-            &--open.isOpen ~.nav__list {
-                visibility: visible;
-                opacity: 1;
-                height: 100vh;
-            }
-        }
-
-        &--close {
-            position: fixed;
-            width: 3.7rem;
-            height: 3.7rem;
-            right: 4rem;
-            top: 3.25rem;
-            visibility: hidden;
-
-            @include respond(tab-port) {
-                top: 3.25rem;
-                right: 3.1rem;
-            }
-
-            & line {
-                stroke: currentColor;
-                stroke-width: 5;
-                transition: stroke .2s;
-            }
-
-            &:hover line {
-                stroke: rgba($color-text, .75);
-            }
-        }
+    &:hover {
+      fill: rgba($color-text, 0.75);
     }
 
+    // Switch to mobile nav
+    @include respond(tab-land) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &--open {
+      position: absolute;
+      top: 3.3rem;
+      right: 4.65rem;
+      width: 2.75rem;
+      height: 2.75rem;
+
+      @include respond(tab-port) {
+        top: 3.25rem;
+        right: 3.65rem;
+      }
+
+      & svg {
+        transition: fill 0.2s;
+      }
+    }
+
+    // Styles to apply when nav is open
+    &--open.isOpen ~ .nav__icon--close {
+      visibility: visible;
+    }
+
+    @include respond(tab-land) {
+      &--open.isOpen ~ .nav__list {
+        visibility: visible;
+        opacity: 1;
+        height: 100vh;
+      }
+    }
+
+    &--close {
+      position: fixed;
+      width: 3.7rem;
+      height: 3.7rem;
+      right: 4rem;
+      top: 3.25rem;
+      visibility: hidden;
+
+      @include respond(tab-port) {
+        top: 3.25rem;
+        right: 3.1rem;
+      }
+
+      & line {
+        stroke: currentColor;
+        stroke-width: 5;
+        transition: stroke 0.2s;
+      }
+
+      &:hover line {
+        stroke: rgba($color-text, 0.75);
+      }
+    }
+  }
 }
 
 // NAV UTILITIES
 .isOpen {
-    visibility: hidden;
-    opacity: 0;
+  visibility: hidden;
+  opacity: 0;
 }

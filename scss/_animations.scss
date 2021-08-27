@@ -1,64 +1,70 @@
 // INTERSECTION OBSERVER DECLARATIONS
 .fade {
-    transition: opacity .75s ease-in-out, transform .75s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
+  transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out, background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .fadeFromTop {
-    opacity: 0;
-    transform: translateY(-2rem);
+  opacity: 0;
+  transform: translateY(-2rem);
 }
 
 .fadeFromTopVisible {
-    transform: translateY(0);
-    opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .fadeFromLeft {
-    opacity: 0;
-    transform: translateX(-2rem);
+  opacity: 0;
+  transform: translateX(-2rem);
 }
 
 .fadeFromLeftVisible {
-    transform: translateX(0);
-    opacity: 1;
+  transform: translateX(0);
+  opacity: 1;
 }
 
-div.fadeDelayShort { // Adding div to override specificity of .fade transition declaration and add delay
-    transition: opacity .75s .4s ease-in, transform .75s .4s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
+div.fadeDelayShort {
+  // Adding div to override specificity of .fade transition declaration and add delay
+  transition: opacity 0.75s 0.4s ease-in, transform 0.75s 0.4s ease-in, background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out, border 0.3s ease-in-out;
 
-    // Remove delay once stacked
-    @include respond(tab-port) {
-        transition: opacity .75s ease-in, transform .75s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
-    }
+  // Remove delay once stacked
+  @include respond(tab-port) {
+    transition: opacity 0.75s ease-in, transform 0.75s ease-in, background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out, border 0.3s ease-in-out;
+  }
 }
 
-div.fadeDelayLong { // Adding div to override specificity of .fade transition declaration and add delay
-    transition: opacity .75s .6s ease-in, transform .75s .6s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
+div.fadeDelayLong {
+  // Adding div to override specificity of .fade transition declaration and add delay
+  transition: opacity 0.75s 0.6s ease-in, transform 0.75s 0.6s ease-in, background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out, border 0.3s ease-in-out;
 
-    // Remove delay once stacked
-    @include respond(tab-port) {
-        transition: opacity .75s ease-in, transform .75s ease-in, background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
-    }
+  // Remove delay once stacked
+  @include respond(tab-port) {
+    transition: opacity 0.75s ease-in, transform 0.75s ease-in, background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out, border 0.3s ease-in-out;
+  }
 }
-
 
 // KEYFRAMES FOR CSS ANIMATIONS
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-in-up {
-    0% {
-        opacity: 0;
-        transform: translateY(2rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

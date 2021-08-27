@@ -1,79 +1,80 @@
 .section--staff {
-    margin-top: 6rem;
+  margin-top: 6rem;
 }
 
 .staff {
-    padding: 5rem 0 4rem 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around; // IE 11
+  padding: 5rem 0 4rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; // IE 11
 
-    // != IE 11
-    @supports (justify-content: space-evenly) {
-        justify-content: space-evenly;
+  // != IE 11
+  @supports (justify-content: space-evenly) {
+    justify-content: space-evenly;
+  }
+
+  @include respond(tab-port) {
+    padding: 5rem 0 4rem;
+  }
+
+  &__employee {
+    padding: 3.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 30%;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 2px hsla(255, 255, 255, 0.1), 0 2px 0 hsla(255, 255, 100%, 0.2),
+      inset 0 0 1.5rem rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(to bottom, $color-grey-on-black, $color-grey-on-black);
+
+    &:not(:last-child) {
+      @include respond(tab-port) {
+        margin-bottom: 6rem;
+      }
+    }
+
+    @include respond(desk-large) {
+      flex: 0 0 40%;
     }
 
     @include respond(tab-port) {
-        padding: 5rem 0 4rem;
+      flex: 0 0 100%;
+      padding: 3.5rem 2rem;
     }
+  }
 
-    &__employee {
-        padding: 3.75rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 0 0 30%;
-        border-radius: 5px;
-        box-shadow: inset 0 2px 2px hsla(255, 255, 255, .1), 0 2px 0 hsla(255, 255, 100%, .2), inset 0 0 1.5rem rgba(255,255,255, .1);
-        background-image: linear-gradient(to bottom, $color-grey-on-black, $color-grey-on-black);
+  &__image {
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 2rem;
+    border: 1rem solid transparent;
+    box-shadow: 0 0 0 1.5px #666;
+  }
 
-        &:not(:last-child) {
-            @include respond(tab-port) {
-                margin-bottom: 6rem;
-            }
-        }
+  &__title {
+    position: relative;
+    text-align: center;
+    padding-bottom: 2rem;
 
-        @include respond(desk-large) {
-            flex: 0 0 40%;
-        }
-
-        @include respond(tab-port) {
-            flex: 0 0 100%;
-            padding: 3.5rem 2rem;
-        }
+    // Separator
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 7rem;
+      text-align: center;
+      border-bottom: 1px solid #666;
+      padding-bottom: 2rem;
+      display: inline-block;
     }
-    
-    &__image {
-        border-radius: 50%;
-        width: 15rem;
-        height: 15rem;
-        margin-bottom: 2rem;
-        border: 1rem solid transparent;
-        box-shadow: 0 0 0 1.5px #666;
-    }
+  }
 
-    &__title {
-        position: relative;
-        text-align: center;
-        padding-bottom: 2rem;
-
-        // Separator
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 7rem;
-            text-align: center;
-            border-bottom: 1px solid #666;
-            padding-bottom: 2rem;
-            display: inline-block;
-        }
-    }
-
-    // Fixing IE Flexbug #2 - https://github.com/philipwalton/flexbugs#2-column-flex-items-set-to-align-itemscenter-overflow-their-container
-    &__description {
-        max-width: 100%;
-    }
+  // Fixing IE Flexbug #2 - https://github.com/philipwalton/flexbugs#2-column-flex-items-set-to-align-itemscenter-overflow-their-container
+  &__description {
+    max-width: 100%;
+  }
 }
