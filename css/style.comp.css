@@ -631,6 +631,9 @@ div.fadeDelayLong {
   @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 3rem; } }
+  .footer__memorium {
+    font-weight: 600;
+    padding-bottom: 0.5rem; }
   .footer__logo {
     width: 17rem;
     display: block;
